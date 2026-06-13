@@ -1,3 +1,20 @@
+######################################################################
+# PATCHED VERSION - fixes for Linux/Proton EA App detection
+#
+# Changes from the original:
+#   - Dynamically locates EA Desktop by searching for EADesktop.exe,
+#     instead of a hardcoded version-numbered path that breaks on
+#     every EA App update
+#   - Properly merges "version"=native,builtin into the existing
+#     [Software\Wine\DllOverrides] registry section (the original
+#     appended a new section that Wine ignores)
+#   - Copies version.dll to all detected EA Desktop version folders,
+#     in case multiple versions are installed
+#
+# To use: overwrite the setup_linux.sh included in the EA DLC Unlocker v2
+# release with this file, then run it as normal.
+######################################################################
+
 #!/usr/bin/env bash
 
 cd "$(dirname "$0")"
