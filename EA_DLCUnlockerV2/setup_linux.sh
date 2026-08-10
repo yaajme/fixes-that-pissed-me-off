@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 ######################################################################
 # PATCHED VERSION - fixes for Linux/Proton EA App detection
 #
@@ -14,8 +15,6 @@
 # To use: overwrite the setup_linux.sh included in the EA DLC Unlocker v2
 # release with this file, then run it as normal.
 ######################################################################
-
-#!/usr/bin/env bash
 
 cd "$(dirname "$0")"
 
